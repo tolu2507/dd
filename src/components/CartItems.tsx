@@ -34,7 +34,7 @@ export function CartItems({ id, quantity }: Cart) {
           {currencyFormatter(item.price)}
         </div>
           </div>
-          <div>{currencyFormatter(item.price * quantity)}</div>
+          <div>{currencyFormatter(item.price + quantity)}</div>
           <Button variant="outline-danger" size="sm" onClick={()=>removeItem(item.id)}>&times;</Button>
     </Stack>
   );
